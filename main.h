@@ -16,7 +16,7 @@ int printf_percent(va_list args);
 int printf_string(va_list args);
 
 /*
- * struct specifier - format specifier and fonction
+ * struct specifier - represent a format specifier and its associated function
  * @format: the format specifier
  * @function: function of the format specified
  */
