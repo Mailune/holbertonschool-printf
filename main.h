@@ -3,10 +3,11 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
-#include <stdarg.h>
+#include <stdio.h>
 #include <unistd.h>
 
-int _printf(const char *format, ...)
+int (*printf_func(const char *ptr_specifier))(va_list);
+int _printf(const char *format, ...);
 
 int _putchar(char c);
 int printf_char(va_list args);
@@ -24,6 +25,6 @@ typedef struct specifier
 {
 	char format;
 	int (*function)(va_list);
-};
+} specif;
 
 #endif
