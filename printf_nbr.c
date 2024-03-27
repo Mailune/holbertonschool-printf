@@ -1,4 +1,5 @@
-include "main.h"
+#include "main.h"
+#include <limits.h>
 
 /**
  * printf_nbr - print a number
