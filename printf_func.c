@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * printf_func - check and verif the specifier to send it
@@ -7,23 +7,23 @@ include "main.h"
  * Return: function associate or NULL if not found
  */
 
-int (*printf_func(char *ptr_specifier))(va_list)
+int (*printf_func(const char *ptr_specifier))(va_list)
 {
-	specifier function[] = {
-		{"c", printf_char},
-		{"s", printf_string},
-		{"%", printf_percent},
-		{"d", printf_nbr},
-		{"i", printf_nbr},
-		{NULL, NULL}
+	struct specifier function[] = {
+		{'c', printf_char},
+		{'s', printf_string},
+		{'%', printf_percent},
+		{'d', printf_nbr},
+		{'i', printf_nbr},
+		{'\0', NULL}
 		};
 
 	int i;
 
-	for (i = 0; function[i].format != NULL; i++)
+	for (i = 0; function[i].format != '\0'; i++)
 	{
 		if (*ptr_specifier == function[i].format)
-			return (function[i].format)
+			return (function[i].function);
 	}
 	return (NULL);
 }
