@@ -3,6 +3,7 @@
 /**
  * printf_func - check and verif the specifier to send it
  * to the right function to use
+ * struct specifier - Represents a format specifier and its associated function
  * @ptr_specifier: pointer of element
  * Return: function associate or NULL if not found
  */
