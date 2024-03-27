@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			search_func = printf_func(format);
 
 			if (search_func != NULL)
-				count = count + search_func(list_args);
+				count = count + search_func(listargs);
 			else
 			{
 				_putchar('%');
