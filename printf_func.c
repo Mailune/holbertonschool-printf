@@ -3,14 +3,14 @@
 /**
  * printf_func - check and verif the specifier to send it
  * to the right function to use
- * struct specifier - Represents a format specifier and its associated function
+ * specif: structure of the function
  * @ptr_specifier: pointer of element
  * Return: function associate or NULL if not found
  */
 
 int (*printf_func(const char *ptr_specifier))(va_list)
 {
-	struct specifier function[] = {
+	specif function[] = {
 		{'c', printf_char},
 		{'s', printf_string},
 		{'%', printf_percent},
