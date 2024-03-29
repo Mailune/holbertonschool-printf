@@ -52,10 +52,26 @@ The printf function is a standard library function in the C language used for fo
 | d | print a deciman | _printnumbers |
 
 ##  *Examples* :
-- Print a string: `_printf("Hello, %s!\n", "world");` Result : "*Hello, world!*"
-- Print a character: `_printf("
-- Print an integer: `_printf("
-- Print a percent: `_printf("
+
+        Print a string
+        
+    _printf("Hello, %s!\n", "world");
+        Result : "*Hello, world!*"
+    
+        Print a character
+        
+    _printf("The first letter of the alphabet is %c.\n", 'A');
+        Result : "*The first letter of the alphabet is A.*"
+
+        Print an integer
+        
+    _printf("The answer to everything is %d.\n", 42);
+        Result : "*The answer to everything is 42.*"
+
+        Print a percent
+        
+    _printf("10%% discount on all items!\n");
+        Result : "*10% discount on all items!*"
 
 ## ⏩ Compilation command ⏩:
 ```c
@@ -69,11 +85,11 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 ##  Crédits:
 
 #### 👤 Louis Saint-Machin
-- Mail: ?
+- Mail:  louis.saintmachin@gmail.com
 - Github: [@LouisXV16](https://github.com/LouisXV16)
 
 #### 👤 Maïlys Rosereau
-- Mail: 8831@holbertonstudents.com
+- Mail: mailysrosereau@yahoo.fr
 - Github: [@Mailune](https://github.com/Mailune)
  
 
