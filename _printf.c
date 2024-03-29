@@ -6,40 +6,40 @@
 * Return: charaters printed
 */
 
-int _printf(const char *format, ...)
+int _printf(const char *format, ...)	/* Defines _printf with format string. */
 {
-	int count = 0;
-	int (*search_func)(va_list);
-	va_list listargs;
+	int count = 0;	/* Initializes count of printed characters. */
+	int (*search_func)(va_list);	/* Pointer to function for format specifier. */
+	va_list listargs;	/* Declares a va_list for variable arguments. */
 
-	va_start(listargs, format);
+	va_start(listargs, format);	/* Initializes va_list with format. */
 
-	if (format == NULL)
-		return (-1);
+	if (format == NULL)	/* Checks if format string is NULL. */
+		return (-1);	/* Returns -1 if format string is NULL. */
 
-	while (*format != '\0')
+	while (*format != '\0')	/* Loops through format string until end. */
 	{
-		if (*format != '%')
+		if (*format != '%') /* Checks if character is not a format specifier. */
 		{
-			_putchar(*format);
-			count++;
+			_putchar(*format);	/* Prints non-format specifier character. */
+			count++;	/* Increments count of printed characters. */
 		}
 		else
 		{
-			format++;
-			search_func = printf_func(format);
+			format++;	/* Moves past '%' to check for format specifier. */
+			search_func = printf_func(format);	/* Searches for format specifier func */
 
-			if (search_func != NULL)
-				count = count + search_func(listargs);
+			if (search_func != NULL)	/* Checks if format specifier function found. */
+				count += search_func(listargs);	/* Print formatted output,updates count */
 			else
 			{
-				_putchar('%');
-				_putchar(*format);
-				count = count + 2;
+				_putchar('%');	/* Prints '%' character. */
+				_putchar(*format);	/* Prints character following '%'. */
+				count += 2;	/* Increments count for '%' and character. */
 			}
 		}
-		format++;
+		format++;	/* Moves to next character in format string. */
 	}
-	va_end(listargs);
-	return (count);
+	va_end(listargs);	/* Ends va_list processing. */
+	return (count);	/* Returns total count of printed characters. */
 }
