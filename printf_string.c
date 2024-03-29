@@ -6,25 +6,25 @@
  * Return: length of the printed string)
  */
 
-int printf_string(va_list args)
+int printf_string(va_list args) /* Defines printf_string taking va_list. */
 {
-	int count = 0;
-	char *str;
+	int count = 0;	/* Initializes count of printed characters. */
+	char *str;	/* Declares a pointer to the string. */
 
-	str = va_arg(args, char*);
+	str = va_arg(args, char*);	/* Retrieves string argument from va_list. */
 
-	if (str == NULL)
+	if (str == NULL)	/* Checks if string is NULL. */
 	{
-		str = "(null)";
+		str = "(null)";	/* Assigns default string if NULL. */
 	}
 
-	while (*str)
+	while (*str)	/* Iterates through the string. */
 	{
-		_putchar(*str);
-		count++;
-		str++;
+		_putchar(*str);	/* Prints each character. */
+		count++;	/* Increments count for each character printed. */
+		str++;	/* Moves to the next character in the string. */
 	}
 
-	return (count);
+	return (count);	/* Returns the total length of the printed string. */
 }
 
