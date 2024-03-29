@@ -1,10 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
+#include <stdarg.h>	/* Includes stdarg.h for va_list. */
+#include <stdlib.h>	/* Includes stdlib.h for NULL. */
+#include <stdio.h>	/* Includes stdio.h for printf. */
+#include <unistd.h>	/* Includes unistd.h for write. */
 
 /**
  * struct specifier - represent a format specifier and its associated function
