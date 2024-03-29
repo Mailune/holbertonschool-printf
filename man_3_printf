@@ -1,0 +1,51 @@
+printf(3)				Custom printf Manual				printf(3)
+
+NAME
+       printf - formatted output conversion
+
+SYNOPSIS
+       #include <main.h>
+
+       int _printf(const char *format, ...);
+
+DESCRIPTION
+       The _printf function formats and prints data under control of the format string format.
+
+RETURN VALUE
+       Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings). If an output error is encountered, a negative value is returned.
+
+FORMAT SPECIFIERS
+       The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments.
+
+       The conversion specifications are introduced by the character % and consist of the following components:
+
+       %c     Print a character.
+
+       %s     Print a string.
+
+       %d, %i Print an integer in decimal format.
+
+       %%     Print a percent sign.
+
+       Unsupported or invalid conversion specifications result in undefined behavior.
+
+EXAMPLES
+
+           _printf("Hello, %s!\n", "world");
+           _printf("The answer is %d.\n", 42);
+           return 0;
+       }
+
+       The above program will output:
+
+       Hello, world!
+       The answer is 42.
+
+SEE ALSO
+       printf(3), putchar(3), va_arg(3)
+
+AUTHOR
+	This manual page was written by Maïlys ROSEREAU <mailysrosereau@yahoo.fr> and Louis Saint Machin <louis.saintmachin@gmail.com>
+
+COPYRIGHT
+       Copyright © 2024 Maïlys Rosereau & Louis Saint Machin.
