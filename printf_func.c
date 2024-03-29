@@ -19,12 +19,13 @@ int (*printf_func(const char *ptr_specifier))(va_list)
 		{'\0', NULL}
 		};
 
-	int i;
+	int index;	/* Counter variable */
 
-	for (i = 0; function[i].format != '\0'; i++)
+	/* Loop through the array to find the matching specifier */
+	for (index = 0; function[index].format != '\0'; index++)
 	{
-		if (*ptr_specifier == function[i].format)
-			return (function[i].function);
+		if (*ptr_specifier == function[index].format)/* Check if specifier matches */
+			return (function[index].function);	/* Return associated function */
 	}
-	return (NULL);
+	return (NULL);	/* Return NULL if specifier not found */
 }
