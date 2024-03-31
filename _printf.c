@@ -27,6 +27,12 @@ int _printf(const char *format, ...)	/* Defines _printf with format string. */
 		else
 		{
 			format++;	/* Moves past '%' to check for format specifier. */
+
+			if (*format == '\0')	/* If '%' is at the end of format string */
+			{
+				_putchar('%');	/* Prints '%' character */
+					break;	/* Exit the loop */
+			}
 			search_func = printf_func(format);	/* Searches for format specifier func */
 
 			if (search_func != NULL)	/* Checks if format specifier function found. */
