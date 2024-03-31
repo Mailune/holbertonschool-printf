@@ -38,7 +38,9 @@ The printf function is a standard library function in the C language used for fo
 
 ## 📋 Activity UML diagram
 
-
+<p align="center">
+<img width="1148" alt="Capture d’écran 2024-03-31 à 19 42 37" src="https://github.com/Mailune/holbertonschool-printf/assets/156970898/4265914f-6508-40e7-9436-e15f8f84488b">
+</p>
 
 ### Conversion specifiers
 
@@ -80,6 +82,10 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ## 📁 Man page 📁 :
 ```
+Go check our man page printf 
+
+[man_3_printf](https://github.com/Mailune/holbertonschool-printf/blob/main/man_3_printf)
+
 ```
 
 ##  Crédits:
